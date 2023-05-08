@@ -1,0 +1,84 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "bf1font";
+  cursor: url(@/assets/icon/Arrow.cur), default;
+}
+
+@font-face {
+  font-family: "bf1font";
+  src: url(@/assets/fonts/FuturaMaxiBook-TC-c3bf1e0d.ttf);
+}
+
+html,
+body,
+#app {
+  height: 100%;
+  width: 100%;
+}
+
+html {
+  background-image: url(@/assets/images/maps/MP_Ridge_BGLoop-22333a03.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+body {
+  backdrop-filter: blur(20px);
+}
+
+button {
+  padding: 10px 20px;
+  color: #fff;
+  background-color: transparent;
+  border: 1px solid gray;
+  transition: all 0.1s ease;
+}
+button:hover {
+  color: #000;
+  background-color: #fff;
+}
+
+input[type="text"] {
+  padding: 10px;
+  width: 150px;
+  outline: none;
+  color: #fff;
+  background-color: transparent;
+  border: 1px solid gray;
+}
+input[type="text"]:focus {
+  outline: none;
+}
+input[type="text"]::-webkit-input-placeholder {
+  color: #fff;
+  opacity: 0.5;
+}
+
+/* 滚动条整体 */
+::-webkit-scrollbar {
+  height: 2px;
+  width: 2px;
+}
+
+/* 两个滚动条交接处 -- x轴和y轴 */
+::-webkit-scrollbar-corner {
+  background-color: transparent;
+}
+
+/* 滚动条滑块 */
+::-webkit-scrollbar-thumb {
+  background: #fff;
+}
+
+/* 滚动条轨道 */
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+/* 滚动条两端按钮 */
+::-webkit-scrollbar-button {
+  display: none;
+}
