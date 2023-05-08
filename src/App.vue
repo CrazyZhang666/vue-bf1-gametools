@@ -1,5 +1,5 @@
 <script setup>
-import { ref, inject, computed } from "vue";
+import { ref, inject, computed, onMounted } from "vue";
 
 import getRegionImage from "@/utils/region.js";
 
@@ -38,6 +38,10 @@ function switchBackImage() {
     `var(--background-image-0${imgIndex})`
   );
 }
+
+onMounted(() => {
+  refreshServerList("all");
+});
 
 function refreshServerList(region) {
   filterKey.value = "";
