@@ -1,8 +1,8 @@
 :root {
-  --background-image-01: url("@/assets/images/maps/MP_Beachhead_BGLoop-4f04c02e.jpg");
-  --background-image-02: url("@/assets/images/maps/MP_Harbor_BGLoop-70b9c5f4.jpg");
-  --background-image-03: url("@/assets/images/maps/MP_Naval_BGLoop-dd6e9a89.jpg");
-  --background-image-04: url("@/assets/images/maps/MP_Ridge_BGLoop-22333a03.jpg");
+  --background-image-01: url("https://eaassets-a.akamaihd.net/battlelog/battlebinary/sparta/assets/tunguska/backgrounds/MP_Naval_BGLoop-dd6e9a89.jpg");
+  --background-image-02: url("https://eaassets-a.akamaihd.net/battlelog/battlebinary/sparta/assets/tunguska/backgrounds/MP_Harbor_BGLoop-70b9c5f4.jpg");
+  --background-image-03: url("https://eaassets-a.akamaihd.net/battlelog/battlebinary/sparta/assets/tunguska/backgrounds/MP_Beachhead_BGLoop-4f04c02e.jpg");
+  --background-image-04: url("https://eaassets-a.akamaihd.net/battlelog/battlebinary/sparta/assets/tunguska/backgrounds/MP_Ridge_BGLoop-22333a03.jpg");
 
   --background-image: var(--background-image-04);
 }
@@ -17,7 +17,7 @@
 
 @font-face {
   font-family: "bf1font";
-  src: url(@/assets/fonts/FuturaMaxiBook-TC-c3bf1e0d.ttf);
+  src: url(https://eaassets-a.akamaihd.net/battlelog/battlebinary/sparta/jsclient/builds/assets/FuturaMaxiBook-TC-c3bf1e0d.ttf);
 }
 
 html,
