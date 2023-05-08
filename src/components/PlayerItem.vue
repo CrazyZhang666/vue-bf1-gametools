@@ -47,6 +47,7 @@ defineProps(["player", "index"]);
 }
 .player .name {
   flex: 1;
+  font-size: 1em;
 }
 .player .time {
   text-align: right;

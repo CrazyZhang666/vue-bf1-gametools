@@ -13,9 +13,10 @@ defineProps(["server", "index"]);
       <div class="prefix">{{ server.prefix }}</div>
       <div class="description">
         {{ server.description }}
-        <span v-if="server.description !== ''" class="tooltip">{{
-          server.description
-        }}</span>
+        <span class="tooltip">
+          <div>{{ server.prefix }}</div>
+          <div>{{ server.description }}</div>
+        </span>
       </div>
       <div class="map">
         <img :src="server.regionImage" :title="server.region" />
@@ -96,14 +97,19 @@ defineProps(["server", "index"]);
   margin: 10px;
   padding: 10px;
   position: absolute;
-  left: 50%;
+  left: 40%;
   top: 60%;
   box-shadow: 0 0 10px #000;
   background-color: #fff;
   visibility: collapse;
-  z-index: 9999;
+  z-index: 99;
 }
 .description:hover .tooltip {
   visibility: visible;
+}
+.tooltip > :nth-child(1) {
+  font-size: 1.2em;
+  font-weight: bold;
+  margin-bottom: 3px;
 }
 </style>

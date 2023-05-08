@@ -174,7 +174,7 @@ function serverClikc(server) {
   width: 100%;
   padding: 10px;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1.2fr;
   grid-template-rows: auto 1fr;
   row-gap: 10px;
   column-gap: 10px;
