@@ -91,10 +91,9 @@ function serverClikc(server) {
       <button @click="refreshServerList('all')">全部区域</button>
       <button @click="refreshServerList('asia')">亚洲</button>
       <button @click="refreshServerList('eu')">欧洲</button>
-      <button @click="refreshServerList('sam')">南美洲</button>
+      <button @click="refreshServerList('oc')">大洋洲</button>
       <button @click="refreshServerList('nam')">北美洲</button>
-      <button @click="refreshServerList('au')">大洋洲</button>
-      <button @click="refreshServerList('oc')">非洲</button>
+      <button @click="refreshServerList('sam')">南美洲</button>
       <div></div>
       <input type="text" v-model="filterKey" placeholder="筛选结果" />
     </div>
