@@ -22,7 +22,6 @@ const filterServerList = computed(() => {
   if (filterKey.value === "") return serverList.value;
 
   filterKey.value = filterKey.value.toLowerCase();
-  console.log(filterKey.value);
 
   return serverList.value.filter((server) => {
     let prefix = server.prefix.toLowerCase();
@@ -53,8 +52,6 @@ function getServerList(region) {
     },
   })
     .then((res) => {
-      console.log(res);
-
       res.data.servers.sort((a, b) => {
         if (a.playerAmount == b.playerAmount) {
           return b.inQue - a.inQue;
@@ -79,7 +76,6 @@ function getServerList(region) {
 }
 
 function serverClikc(server) {
-  console.log(server);
   selectServer.value = server;
   childRef.value.getServerPlayerList(server);
 }

@@ -29,8 +29,6 @@ function getServerPlayerList(server) {
     },
   })
     .then((res) => {
-      console.log(res);
-
       res.data.teams[0].players.sort((a, b) => {
         return b.rank - a.rank;
       });
