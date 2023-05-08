@@ -11,7 +11,12 @@ defineProps(["server", "index"]);
     <!-- 服务器信息 -->
     <div class="server-info">
       <div class="prefix">{{ server.prefix }}</div>
-      <div class="description">{{ server.description }}</div>
+      <div class="description">
+        {{ server.description }}
+        <span v-if="server.description !== ''" class="tooltip">{{
+          server.description
+        }}</span>
+      </div>
       <div class="map">
         <img :src="server.regionImage" :title="server.region" />
         <div>{{ server.mode }} - {{ server.currentMap }} - 60HZ</div>
@@ -32,6 +37,7 @@ defineProps(["server", "index"]);
   flex-wrap: nowrap;
   align-items: center;
   border-bottom: 1px solid gray;
+  position: relative;
 }
 .server:hover {
   color: #000;
@@ -84,5 +90,20 @@ defineProps(["server", "index"]);
   width: 100px;
   text-align: right;
   margin-right: 20px;
+}
+
+.description .tooltip {
+  margin: 10px;
+  padding: 10px;
+  position: absolute;
+  left: 50%;
+  top: 60%;
+  box-shadow: 0 0 10px #000;
+  background-color: #fff;
+  visibility: collapse;
+  z-index: 9999;
+}
+.description:hover .tooltip {
+  visibility: visible;
 }
 </style>
