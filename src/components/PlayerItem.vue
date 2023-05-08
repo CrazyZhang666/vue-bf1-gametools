@@ -27,19 +27,19 @@ defineProps(["player", "index"]);
   color: #000;
   background-color: #fff;
 }
-.player > img {
-  width: 26px;
-  height: 26px;
-  margin-right: 10px;
-}
 .player .index {
-  width: 20px;
+  width: 15px;
   text-align: right;
   font-size: 0.8em;
   margin-right: 10px;
 }
+.player > img {
+  width: 24px;
+  height: 24px;
+  margin-right: 10px;
+}
 .player .rank {
-  width: 40px;
+  width: 35px;
   font-size: 0.8em;
   text-align: center;
   border: 1px solid gray;
@@ -55,7 +55,7 @@ defineProps(["player", "index"]);
 }
 .player .latency {
   text-align: right;
-  width: 60px;
+  width: 50px;
   font-size: 0.8em;
 }
 </style>
