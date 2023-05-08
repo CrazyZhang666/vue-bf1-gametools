@@ -1,3 +1,12 @@
+:root {
+  --background-image-01: url("@/assets/images/maps/MP_Beachhead_BGLoop-4f04c02e.jpg");
+  --background-image-02: url("@/assets/images/maps/MP_Harbor_BGLoop-70b9c5f4.jpg");
+  --background-image-03: url("@/assets/images/maps/MP_Naval_BGLoop-dd6e9a89.jpg");
+  --background-image-04: url("@/assets/images/maps/MP_Ridge_BGLoop-22333a03.jpg");
+
+  --background-image: var(--background-image-04);
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -19,10 +28,11 @@ body,
 }
 
 html {
-  background-image: url(@/assets/images/maps/MP_Ridge_BGLoop-22333a03.jpg);
+  background-image: var(--background-image);
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
+  transition: all 0.3s;
 }
 
 body {

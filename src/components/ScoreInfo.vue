@@ -1,6 +1,8 @@
 <script setup>
 import { ref, inject } from "vue";
 
+import { differenceInMinutes } from "date-fns";
+
 import PlayerItem from "./PlayerItem.vue";
 import Loading from "./Loading.vue";
 
@@ -40,9 +42,11 @@ function getServerPlayerList(server) {
       team2Player.value = [];
 
       for (let item of res.data.teams[0].players) {
+        item.join_time = differenceInMinutes(Date.now(), item.join_time / 1000);
         team1Player.value.push(item);
       }
       for (let item of res.data.teams[1].players) {
+        item.join_time = differenceInMinutes(Date.now(), item.join_time / 1000);
         team2Player.value.push(item);
       }
 

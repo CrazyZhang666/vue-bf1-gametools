@@ -16,6 +16,7 @@ const serverList = ref({});
 const filterKey = ref("");
 const selectServer = ref({});
 
+let imgIndex = 4;
 const isLoading = ref(false);
 
 const filterServerList = computed(() => {
@@ -28,6 +29,15 @@ const filterServerList = computed(() => {
     return prefix.indexOf(filterKey.value) !== -1;
   });
 });
+
+function switchBackImage() {
+  if (++imgIndex > 4) imgIndex = 1;
+
+  document.documentElement.style.setProperty(
+    "--background-image",
+    `var(--background-image-0${imgIndex})`
+  );
+}
 
 function refreshServerList(region) {
   filterKey.value = "";
@@ -84,7 +94,10 @@ function serverClikc(server) {
 <template>
   <div class="main">
     <div class="panel">
-      <img src="@/assets/images/other/logo_console-55b4af21.png" />
+      <img
+        @click="switchBackImage"
+        src="@/assets/images/other/logo_console-55b4af21.png"
+      />
       <button @click="refreshServerList('all')">全部區域</button>
       <button @click="refreshServerList('asia')">亞洲</button>
       <button @click="refreshServerList('eu')">歐洲</button>

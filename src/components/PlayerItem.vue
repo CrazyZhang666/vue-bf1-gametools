@@ -11,6 +11,7 @@ defineProps(["player", "index"]);
       [{{ player.platoon }}] {{ player.name }}
     </div>
     <div class="name" v-if="player.platoon === ''">{{ player.name }}</div>
+    <div class="time">{{ player.join_time }} 分钟</div>
     <div class="latency">{{ player.latency }} ms</div>
   </div>
 </template>
@@ -39,7 +40,7 @@ defineProps(["player", "index"]);
 }
 .player .rank {
   width: 40px;
-  font-size: 0.9em;
+  font-size: 0.8em;
   text-align: center;
   border: 1px solid gray;
   margin-right: 10px;
@@ -47,9 +48,14 @@ defineProps(["player", "index"]);
 .player .name {
   flex: 1;
 }
+.player .time {
+  text-align: right;
+  width: 60px;
+  font-size: 0.8em;
+}
 .player .latency {
   text-align: right;
-  width: 70px;
-  font-size: 14px;
+  width: 60px;
+  font-size: 0.8em;
 }
 </style>
