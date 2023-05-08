@@ -88,14 +88,16 @@ function serverClikc(server) {
 <template>
   <div class="main">
     <div class="panel">
-      <button @click="refreshServerList('all')">全部区域</button>
-      <button @click="refreshServerList('asia')">亚洲</button>
-      <button @click="refreshServerList('eu')">欧洲</button>
+      <img src="@/assets/images/other/logo_console-55b4af21.png" />
+      <button @click="refreshServerList('all')">全部區域</button>
+      <button @click="refreshServerList('asia')">亞洲</button>
+      <button @click="refreshServerList('eu')">歐洲</button>
       <button @click="refreshServerList('oc')">大洋洲</button>
       <button @click="refreshServerList('nam')">北美洲</button>
       <button @click="refreshServerList('sam')">南美洲</button>
       <div></div>
-      <input type="text" v-model="filterKey" placeholder="筛选结果" />
+      <label>結果: {{ filterServerList.length }}</label>
+      <input type="text" v-model="filterKey" placeholder="篩選結果" />
     </div>
     <div class="info">
       <img
@@ -172,8 +174,17 @@ function serverClikc(server) {
   display: flex;
   align-items: center;
 }
+.panel > img {
+  height: 30px;
+  margin-right: 10px;
+}
 .panel > div {
   flex: 1;
+}
+.panel > label {
+  color: #fff;
+  font-size: 0.8em;
+  margin-right: 10px;
 }
 .info {
   color: #fff;

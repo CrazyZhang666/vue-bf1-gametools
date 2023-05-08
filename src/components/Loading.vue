@@ -20,7 +20,7 @@
 }
 .block {
   color: #fff;
-  font-size: 1.5rem;
+  font-size: 1em;
 }
 .full-v {
   width: 100%;

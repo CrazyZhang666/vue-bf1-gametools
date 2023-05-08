@@ -7,8 +7,10 @@ defineProps(["player", "index"]);
     <div class="index">{{ index + 1 }}</div>
     <img :src="`https://cdn.gametools.network/bf1/${player.rank}.png`" alt="" />
     <div class="rank">{{ player.rank }}</div>
-    <div class="platoon">{{ player.platoon }}</div>
-    <div class="name">{{ player.name }}</div>
+    <div class="name" v-if="player.platoon !== ''">
+      [{{ player.platoon }}] {{ player.name }}
+    </div>
+    <div class="name" v-if="player.platoon === ''">{{ player.name }}</div>
     <div class="latency">{{ player.latency }} ms</div>
   </div>
 </template>
@@ -30,14 +32,17 @@ defineProps(["player", "index"]);
   margin-right: 10px;
 }
 .player .index {
-  width: 30px;
+  width: 20px;
+  text-align: right;
   font-size: 0.8em;
+  margin-right: 10px;
 }
 .player .rank {
-  width: 46px;
-}
-.player .platoon {
-  width: 60px;
+  width: 40px;
+  font-size: 0.9em;
+  text-align: center;
+  border: 1px solid gray;
+  margin-right: 10px;
 }
 .player .name {
   flex: 1;
