@@ -110,6 +110,8 @@ defineProps(["server", "index"]);
 .tooltip > :nth-child(1) {
   font-size: 1.2em;
   font-weight: bold;
-  margin-bottom: 3px;
+  margin-bottom: 5px;
+  padding-bottom: 5px;
+  border-bottom: 1px solid gray;
 }
 </style>
