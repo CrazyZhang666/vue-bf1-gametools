@@ -104,7 +104,7 @@ defineExpose({
   flex: 1;
   overflow: auto;
   padding: 10px;
-  border: 1px solid gray;
+  border: 1px solid var(--bf1-color);
 }
 .team1 {
   margin-right: 5px;

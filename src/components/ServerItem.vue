@@ -112,6 +112,6 @@ defineProps(["server", "index"]);
   font-weight: bold;
   margin-bottom: 5px;
   padding-bottom: 5px;
-  border-bottom: 1px solid gray;
+  border-bottom: 1px solid var(--bf1-color);
 }
 </style>

@@ -42,7 +42,7 @@ defineProps(["player", "index"]);
   width: 35px;
   font-size: 0.8em;
   text-align: center;
-  border: 1px solid gray;
+  border: 1px solid var(--bf1-color);
   margin-right: 10px;
 }
 .player .name {
