@@ -229,7 +229,7 @@ function serverClikc(server) {
 .servers {
   flex: 1;
   overflow: auto;
-  padding-right: 3px;
+  padding: 3px;
   border: 1px solid var(--bf1-color);
 }
 .players {
