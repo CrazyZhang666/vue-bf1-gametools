@@ -11,7 +11,7 @@
 
   /* 兼容火狐浏览器 */
   scrollbar-width: thin;
-  scrollbar-gutter: auto;
+  scrollbar-color: #fff transparent;
 }
 
 @font-face {
