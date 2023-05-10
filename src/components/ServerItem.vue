@@ -20,12 +20,16 @@ defineProps(["server", "index"]);
       </div>
       <div class="map">
         <img :src="server.regionImage" :title="server.region" />
-        <div>{{ server.mode }} - {{ server.currentMap }} - 60HZ</div>
+        <div>{{ server.mode }} - {{ server.currentMap }}</div>
+        <div v-if="server.isCustom">&nbsp;-</div>
+        <div class="custom" v-if="server.isCustom">&nbsp;自定</div>
+        <div>&nbsp;- 60HZ</div>
       </div>
     </div>
     <!-- 服务器人数 -->
     <div class="server-count">
       {{ server.playerAmount }} / {{ server.maxPlayers }} [{{ server.inQue }}]
+      ({{ server.inSpectator }})
     </div>
   </div>
 </template>
@@ -87,8 +91,11 @@ defineProps(["server", "index"]);
   width: 20px;
   margin-right: 10px;
 }
+.server-info .map .custom {
+  color: orange;
+}
 .server-count {
-  width: 100px;
+  width: 120px;
   text-align: right;
   margin-right: 20px;
 }

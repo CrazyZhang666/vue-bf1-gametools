@@ -120,8 +120,11 @@ function serverClikc(server) {
         <div class="prefix">{{ selectServer.prefix }}</div>
         <div class="more" v-if="selectServer.teams != undefined">
           <img :src="selectServer.regionImage" :title="selectServer.region" />
-          <div>
-            {{ selectServer.mode }} - {{ selectServer.currentMap }} - 60HZ
+          <div class="game">
+            <div>{{ selectServer.mode }} - {{ selectServer.currentMap }}</div>
+            <div v-if="selectServer.isCustom">&nbsp;-</div>
+            <div class="custom" v-if="selectServer.isCustom">&nbsp;自定</div>
+            <div>&nbsp;- 60HZ</div>
           </div>
           <div>|</div>
           <div>
@@ -225,6 +228,13 @@ function serverClikc(server) {
 .info .details .more > div {
   font-size: 12px;
   margin-right: 10px;
+}
+.info .details .more .game {
+  display: flex;
+  align-items: center;
+}
+.info .details .more .game .custom {
+  color: orange;
 }
 .servers {
   flex: 1;
